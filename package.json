@@ -1,0 +1,20 @@
+{
+    "name": "oas-docs-mock-server",
+    "version": "1.0.0",
+    "description": "api document & mock server",
+    "private": true,
+    "scripts": {
+        "docs": "redocly preview-docs ./openapi.yaml",
+        "export": "redocly build-docs ./openapi.yaml -o ./public/index.html",
+        "mock": "prism mock ./openapi.yaml",
+        "preview": "redocly preview"
+    },
+    "dependencies": {
+        "@stoplight/prism-cli": "^5.7.0",
+        "@redocly/cli": "^1.10.6"
+    },
+    "volta": {
+        "node": "18.13.0",
+        "yarn": "1.22.19"
+    }
+}
