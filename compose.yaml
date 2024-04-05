@@ -1,0 +1,17 @@
+services:
+  prism:
+    image: stoplight/prism:latest
+    platform: linux/amd64
+    command: 'mock -h 0.0.0.0 /openapi.yaml'
+    volumes:
+      - ./openapi.yaml:/openapi.yaml
+    ports:
+      - '3030:4010'
+  redoc:
+    image: redocly/redoc:latest
+    environment:
+      - SPEC_URL=openapi/openapi.yaml
+    volumes:
+      - .:/usr/share/nginx/html/openapi/
+    ports:
+      - "3031:80"
