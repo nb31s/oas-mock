@@ -2,7 +2,7 @@
 
 ## ローカルで起動する場合
 ### 前提
-nodejsを使うので、FEの環境と同様に[volta](https://volta.sh/)を利用しています。
+nodejsを使うので、[volta](https://volta.sh/)を利用しています。
 
 ### 初回起動
 1. `$ yarn install`
